@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌾 Prediction Result</h1>
+
+    <div class="result-box">
+        <p><strong>Recommended Crop:</strong> {{ crop }}</p>
+<p><strong>Estimated Profit:</strong> {{ profit }}</p>
+    <p class="accuracy">
+        Model Accuracy: {{ acc }}%
+    </p>
+
+    <a href="/">🔙 Try Again</a>
+</div>
+
+</body>
+</html>

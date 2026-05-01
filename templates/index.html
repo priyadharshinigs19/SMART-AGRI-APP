@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Agriculture</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌱 Smart Crop Predictor</h1>
+    {% if error %}
+<p style="color:red; text-align:center;">{{ error }}</p>
+{% endif %}
+    <form action="/predict" method="post">
+        <input name="N" placeholder="Nitrogen (N)" required>
+        <input name="P" placeholder="Phosphorus (P)" required>
+        <input name="K" placeholder="Potassium (K)" required>
+        <input name="temp" placeholder="Temperature (°C)" required>
+        <input name="humidity" placeholder="Humidity (%)" required>
+        <input name="ph" placeholder="pH Value" required>
+        <input name="rainfall" placeholder="Rainfall (mm)" required>
+
+        <button type="submit">Predict Crop</button>
+    </form>
+</div>
+
+</body>
+</html>
